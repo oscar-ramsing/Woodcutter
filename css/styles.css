@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --karry: #f2bc1b;
+    --appelsin: #F2AA6B;
+    --blad: #789b50;
+    --sortbrun: #210e02;
+    --blod: #bf2011;
+    --hvid: #ebebeb;
+    --brun: #b47b4c;
+    --blue: powderblue;
+    
+    --normal: font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+    color: var(--sortbrun);
+    --overskrift: font-family: 'Nunito', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+    color: var(--sortbrun);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .2rem; 
+}
+
+a {
+    text-decoration: none; 
+    color: var(--sortbrun);
+}
+
+
+/***************/
+/* Wrapper */
+/***************/
+
+.wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/***************/
+/* Navigation */
+/***************/
+
+nav {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, .85));
+    position: fixed;
+    padding: 1rem 5rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    top: 0;
+    width: 100%;
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+.title {
+    display: inline-block;
+}
+
+.title h3,
+.title h5 {
+    text-transform: none;
+    font-family: var(--normal);
+    font-weight: 400;
+    letter-spacing: .1rem;
+    color: var(--sortbrun);
+}
+
+.title h3 {
+    font-size: 2.5rem;
+}
+
+.title h5 {
+    font-size: 1.5rem;
+}
+
+.title img {
+    height: 5rem;
+    display: inline-block;
+}
+
+.title-text {
+    display: inline-block;
+}
+
+nav ul {
+    position: absolute;
+    right: calc(100% - 87%);
+
+}
+
+nav ul li {
+    padding: .5rem 1rem;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--sortbrun);
+    font-family: "Nunito";
+    font-size: 1.6rem;
+    transition: all .2s;
+}
+
+nav ul li:last-child {
+    background-color: var(--sortbrun);
+    border-radius: .5rem;
+    transition: all .3s;
+    border: .1rem solid transparent;
+    margin-left: 1rem;
+}
+
+nav ul li:last-child:hover {
+    background-color: var(--hvid);
+    border: .1rem solid var(--sortbrun);
+    padding: .5rem 1rem;
+}
+
+nav ul li:last-child a {
+    color: var(--hvid);
+}
+
+nav ul li:last-child:hover a {
+    color: var(--sortbrun);
+}
+
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3d3d3d;
+    transform: scaleX(0);
+    transition: all .5s;
+    transform-origin: left;
+  }
+
+  nav ul li a:hover:after {
+    transform: scaleX(1);
+  }
+
+  nav ul li:last-child a:hover:after {
+    transform: scaleX(0);
+  }
+
+/***************/
+/* Header */
+/***************/
+
+header {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(255, 255, 255, .95), rgba(255, 255, 255, .8), rgba(0, 0, 0, .5)), url("../resources/img/skovhugger-cover.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 5%), 0% 100%);
+}
+
+.hero {
+    padding: 20vh 0 0 5%;
+    display: block;
+}
+
+.hero p {
+    max-width: 50ch;
+    font-size: 2.2rem;
+    margin: 5rem 0;
+    line-height: 3rem;
+}
+
+.hero-credit {
+    display: block;
+    padding: 0% 0% 0% 5%;
+}
+
+.hero-credit p {
+    font-size: 2.2rem;
+    line-height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.hero-credit i {
+    font-size: 3rem;
+    margin-right: 1.5rem;
+    color: var(--blad)
+}
+
+.read-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+}
+
+.read-more h3 {
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.read-more i {
+    font-size: 3rem;
+    color: var(--sortbrun);
+}
+
+.read-more a {
+    text-align: center;
+}
+
+.arrow {
+    animation: down 2s infinite ease-in-out;
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(0rem);
+    } 50% {
+        transform: translateY(.5rem);
+    } 
+}
+
+/***************/
+/* Section skills */
+/***************/
+
+section.skills {
+    height: 100vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, var(--blad), var(--hvid), var(--blad));
+    clip-path: polygon(0% calc(0% + 5vh), 100% 0%, 100% calc(100% - 5vh), 0% 100%);
+    padding: 10% 0;
+} 
+
+
+.skills-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.info-card {
+    height: 20rem;
+    width: 35rem;
+    background-color: var(--hvid);
+    border-radius: .8rem;
+    border: .1rem solid gray;
+    transition: all .2s;
+    position: relative;
+}
+
+
+.info-card:hover {
+    transform: translateY(-.5rem);
+    box-shadow: 0rem .5rem .5rem .2rem #9f9f9f;
+}
+
+.info-card h3 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.hover-link {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .85);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: .8px;
+    transition: all .3s;
+}
+
+.info-card:hover .link {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ul-skills {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.ul-skills p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+}
+
+.ul-skills ul {
+    display: inline-block;
+    padding-left: 4rem;
+}
+
+.ul-skills ul li {
+    display: flex;
+    align-items: center;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    list-style: none;
+    letter-spacing: .05rem;
+}
+
+.ul-skills ul li:before {
+    content: "●";
+    margin-right: .8rem;
+    color: var(--sortbrun);
+    font-size: .5rem;
+}
+
+.label {
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    background-color: var(--sortbrun);
+    z-index: 2;
+    width: 15%;
+    height: 25%;
+    padding: .5rem 1rem 1rem .5rem;
+    font-size: 2.4rem;
+    border-radius: .8rem 0 0 0;
+    display: inline-block;
+    position: absolute;
+}
+
+/* Farve til hver label */
+
+.info-card:nth-of-type(1) .label {
+    background-color: var(--blad);
+}
+
+.info-card:nth-of-type(2) .label {
+    background-color: var(--brun);
+}
+
+.info-card:nth-of-type(3) .label {
+    background-color: lightgray;
+}
+
+.info-card:nth-of-type(4) .label {
+    background-color: var(--karry);
+}
+
+.info-card:nth-of-type(5) .label {
+    background-color: var(--blue);
+}
+
+.info-card:nth-of-type(6) .label {
+    background-color: var(--appelsin);
+}
+
+
+
+
+
+
