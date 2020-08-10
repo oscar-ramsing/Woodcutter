@@ -318,6 +318,10 @@ section.skills {
     letter-spacing: .1rem;
 }
 
+.hover-link a:hover {
+    background-color: var(--sortbrun)
+}
+
 .info-card:hover .hover-link {
     visibility: visible;
     opacity: 1;
