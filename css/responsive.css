@@ -4,18 +4,30 @@
         height: 100%;
     }
     .hero {
-        height: 100%;
+        height: 60%;
         margin-bottom: 1rem;
-        padding: 20vh 0 0 5%;
+        padding: 5vh 0 0 5%;
     }
     header {
         background: linear-gradient(to right, rgba(255, 255, 255, .95), rgba(255, 255, 255, .8)), url("../resources/img/skovhugger-cover.png");
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+
+    nav {
+        width: 100vw;
+    }
+    nav ul {
+        display: none;
+    }
+
     .read-more {
-        gap: 1rem;
+        display: none;
     }
     .hero-credit {
-        display: inline-block;;
+        display: block;
+        margin-top: -3rem;
     }
     .hero-credit p {
         font-size: 1.5rem;
@@ -36,11 +48,5 @@
     .info-card {
         width: 90vw;
         height: 30vh;
-    }
-    nav {
-        width: 100vw;
-    }
-    nav ul {
-        display: none;
     }
 }
