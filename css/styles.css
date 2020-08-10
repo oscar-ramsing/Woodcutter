@@ -403,6 +403,169 @@ section.skills {
 
 
 
+/***************/
+/* Contact */
+/***************/
+
+section.contact-section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, var(--blad), var(--hvid), var(--blad));
+    clip-path: polygon(0% calc(0% + 5vh), 100% 0%, 100% calc(100% - 5vh), 0% 100%);
+    padding: 10% 0;
+  }
+
+  .contact-section h3 {
+      font-size: 2rem;
+  }
+
+.contact-card {
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: .8rem;
+    border: 0px solid black;
+    box-shadow: 0px .1rem .3rem .1rem black;
+    min-width: 50rem;
+    margin: 3% 0;
+    
+  }
+  
+  .contact-card h3 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
+  }
+  
+  .contact-card h3:after {
+    content: "";
+    height: .2rem;
+    width: 20%;
+    display: block;
+    background-color: gray;
+    margin: 1.5rem auto;
+  }
+  
+  .contact-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4rem;
+    padding-top: 1rem;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    height: 100%;
+  }
+  
+  .contact-info div {
+    display: flex;
+    margin-bottom: 1rem;
+  
+  }
+  
+  .contact-info i {
+    margin-right: 1rem;
+  }
+  
+  .fa-facebook {
+    display: block;
+    font-size: 2.5rem;
+    transition: all .3s;
+    text-align: center;
+  }
+  
+  .fa-facebook:hover {
+    color: rgba(59,89,153 ,1);
+  }
+  
+  .image {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image img {
+    height: 15rem;
+    border-radius: 5%;
+  }
+  
+  .image figcaption {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  
+
+  /* Kontaktform */
+  
+  
+  form {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 25rem;
+    flex-direction: column;
+  }
+  
+  .submit {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    margin-top: 1rem 2rem;
+  }
+  
+  .flex-fields {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 100%;
+    
+  }
+  
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  input,
+  textarea {
+    padding: .5rem;
+    outline: none;
+  }
+  
+  input[type="submit"] {
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    border: .2rem solid black;
+    background-color: transparent;
+    letter-spacing: .1rem;
+    transition: all .2s;
+  }
+  
+  input[type="submit"]:hover {
+    transform: scale(1.1);
+    letter-spacing: .2rem;
+  }
+  
+  input[type="submit"]:active {
+    transform: scale(1);
+    letter-spacing: .1rem;
+    border: .2rem solid black;
+    outline: none;
+  }
+
+
+
 
 
 
