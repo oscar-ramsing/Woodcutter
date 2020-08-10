@@ -172,7 +172,7 @@ nav ul li a:after {
 /***************/
 
 header {
-    height: 100vh;
+    height: 93vh;
     background: linear-gradient(to right, rgba(255, 255, 255, .95), rgba(255, 255, 255, .8), rgba(0, 0, 0, .5)), url("../resources/img/skovhugger-cover.png");
     background-size: cover;
     background-attachment: fixed;
@@ -253,7 +253,7 @@ header {
 /***************/
 
 section.skills {
-    height: 100vh;
+    height: 75vh;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -278,6 +278,7 @@ section.skills {
     border: .1rem solid gray;
     transition: all .2s;
     position: relative;
+    margin-top: 2rem;
 }
 
 
@@ -363,28 +364,28 @@ section.skills {
 
 /* Farve til hver label */
 
-.info-card:nth-of-type(1) .label {
-    background-color: var(--blad);
+.info-card:nth-of-type(1) i {
+    color: limegreen;
 }
 
-.info-card:nth-of-type(2) .label {
-    background-color: var(--brun);
+.info-card:nth-of-type(2) i {
+    color: var(--blad);
 }
 
-.info-card:nth-of-type(3) .label {
-    background-color: lightgray;
+.info-card:nth-of-type(3) i {
+    color: gray;
 }
 
-.info-card:nth-of-type(4) .label {
-    background-color: var(--karry);
+.info-card:nth-of-type(4) i {
+    color: var(--karry);
 }
 
-.info-card:nth-of-type(5) .label {
-    background-color: var(--blue);
+.info-card:nth-of-type(5) i {
+    color: var(--blue);
 }
 
-.info-card:nth-of-type(6) .label {
-    background-color: var(--appelsin);
+.info-card:nth-of-type(6) i {
+    color: darkkhaki;
 }
 
 
